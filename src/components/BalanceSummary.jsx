@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./BalanceSummary.css";
 import { useState } from "react";
-
+import data from "../data";
 const BalanceSummary = () => {
   const [weekData, setWeekData] = useState();
 
@@ -10,8 +10,8 @@ const BalanceSummary = () => {
   }, []);
 
   const fetchData = async () => {
-    const response = await fetch("../data.json");
-    const data = await response.json();
+    /*    const response = await fetch("../data.json");
+    const data = await response.json(); */
     setWeekData(data);
   };
 
